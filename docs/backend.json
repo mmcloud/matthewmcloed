@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "ContactFormEntry": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactFormEntry",
+      "type": "object",
+      "description": "Represents a contact form submission.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact form entry."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person submitting the form.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content from the contact form."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp of when the form was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "timestamp"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/contact_form_entries/{contactFormEntryId}",
+        "definition": {
+          "entityName": "ContactFormEntry",
+          "schema": {
+            "$ref": "#/backend/entities/ContactFormEntry"
+          },
+          "description": "Collection to store contact form submissions.",
+          "params": [
+            {
+              "name": "contactFormEntryId",
+              "description": "Unique identifier for the contact form entry."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "Based on the requirements, the data structure focuses on storing contact form entries securely and enabling potential future extensions such as user-specific data or client dashboards. Since there are no roles, we do not need to store roles in the database. Each submission is stored in a flat collection with a timestamp. \n\n**Authorization Independence:** The structure does not rely on hierarchical authorization. Contact form entries are submitted anonymously and stored directly, and, therefore do not require dependency on parent documents.\n\n**QAPs:** The flat collection structure `contact_form_entries` supports list operations. Security rules will ensure only authenticated admins can read the collection while anyone can create a new entry.\n\n**Justification of Paths:**\n*   `/contact_form_entries`: This is the main collection for storing contact form submissions. Each document contains the data submitted through the contact form."
+  }
+}

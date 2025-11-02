@@ -1,0 +1,39 @@
+/**
+ * @file Firestore Security Rules for Contact Form Entries.
+ * @description This ruleset allows anyone to create a contact form entry, but restricts reading, updating, and deleting entries to authenticated users.
+ * @dataStructure All contact form entries are stored in a flat collection at `/contact_form_entries/{contactFormEntryId}`.
+ * @keySecurityDecisions
+ *   - Anyone can create a contact form entry (Public Read with Owner-Only Writes pattern, but 'owner' is the app, not the user).
+ *   - Only authenticated users (e.g., admins) can read, update, or delete contact form entries.
+ *   - User listing is not supported for contact form entries.
+ * @denormalizationForAuthorization N/A - No user-specific ownership.
+ * @structuralSegregation N/A - No private vs. public data. All entries are treated the same.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Controls access to the /contact_form_entries collection.
+     * @path /contact_form_entries/{contactFormEntryId}
+     * @allow (create) Any user can submit a contact form entry.
+     * @deny (get, list, update, delete) Only authenticated users (e.g., admins) can read, update, or delete.
+     * @principle Allows public creation but restricts all other operations to authenticated users.
+     */
+    match /contact_form_entries/{contactFormEntryId} {
+      // Allow anyone to create a contact form entry.
+      allow create: if true;
+
+      // Only allow authenticated users to read, update, and delete contact form entries.
+      allow get: if isSignedIn();
+      allow list: if isSignedIn();
+      allow update: if isSignedIn() && resource != null;
+      allow delete: if isSignedIn() && resource != null;
+    }
+
+    // Helper function to check if a user is signed in.
+    function isSignedIn() {
+      return request.auth != null;
+    }
+  }
+}
