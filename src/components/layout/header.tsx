@@ -45,7 +45,7 @@ export function Header() {
     <header className="fixed top-0 inset-x-0 z-50 p-4">
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 glass-nav rounded-xl">
         <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-white drop-shadow-md">
-          <Cloud className="w-6 h-6 text-white"/>
+          <Cloud className="w-6 h-6 text-white" suppressHydrationWarning />
           Matthew McLeod
         </Link>
         <ul className="hidden md:flex gap-4 font-medium">
@@ -95,5 +95,3 @@ export function Header() {
     </header>
   );
 }
-
-    
