@@ -64,6 +64,11 @@ export default function Home() {
                   View Services
                 </button>
               </a>
+              <a href="/blog">
+                <button className="inline-flex items-center justify-center gap-2 text-sm font-medium h-10 rounded-md px-8 glass-strong text-white hover:bg-white/20 border-white/20">
+                  View Blog
+                </button>
+              </a>
             </div>
           </div>
 
@@ -359,3 +364,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
