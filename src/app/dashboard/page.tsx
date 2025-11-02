@@ -1,3 +1,5 @@
+'use client';
+
 import {
   GlassPanel,
   GlassPanelContent,
@@ -19,19 +21,10 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  ChartLegend,
-  ChartLegendContent,
 } from "@/components/ui/chart";
 import { ArrowUpRight, Package, FileText, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Dashboard | Cloud Native Pro',
-  description: 'Client dashboard overview.',
-};
-
 
 const chartData = [
   { status: "Completed", count: 12 },
