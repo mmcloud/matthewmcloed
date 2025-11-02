@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col text-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-32 pb-20 lg:pt-48 lg:pb-32 text-white">
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-48 pb-20 lg:pt-48 lg:pb-32 text-white">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10"></div>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
                     stroke="currentColor"
                     strokeWidth="2"
                   >
-                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
+                    <path d="M21.8 10A10 10- 0 1 1 17 3.3"></path>
                     <path d="m9 11 3 3L22 4"></path>
                   </svg>
                 </div>
@@ -146,6 +146,59 @@ export default function Home() {
                   <div className="h-3 glass-strong rounded w-3/4 mb-2"></div>
                   <div className="h-2 glass rounded w-1/2"></div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Certified Kubernetes Expert</h2>
+            <p className="text-white/70">Holding all three official CNCF Kubernetes certifications</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+              <div className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                    <circle cx="12" cy="8" r="6"/>
+                  </svg>
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">CKA</div>
+                <div className="text-white/70 text-sm">Certified Kubernetes Administrator</div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+              <div className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                    <circle cx="12" cy="8" r="6"/>
+                  </svg>
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">CKAD</div>
+                <div className="text-white/70 text-sm">Certified Kubernetes Application Developer</div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+              <div className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                    <circle cx="12" cy="8" r="6"/>
+                  </svg>
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">CKS</div>
+                <div className="text-white/70 text-sm">Certified Kubernetes Security Specialist</div>
               </div>
             </div>
           </div>
