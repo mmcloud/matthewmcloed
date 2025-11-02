@@ -233,6 +233,90 @@ export default function Home() {
 
         </div>
       </section>
+      
+      <section className="py-20 relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Comprehensive Cloud Services</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              End-to-end solutions for modern cloud infrastructure
+            </p>
+          </div>
+
+          {/* Service Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {/* Kubernetes Consulting */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group">
+              <div className="p-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Kubernetes Consulting</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Expert guidance on container orchestration, architecture design, and best practices.
+                </p>
+              </div>
+            </div>
+
+            {/* Cloud Migration */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group">
+              <div className="p-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+                    <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+                    <line x1="6" x2="6.01" y1="6" y2="6"/>
+                    <line x1="6" x2="6.01" y1="18" y2="18"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Cloud Migration</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Seamless transition to cloud-native infrastructure with zero downtime strategies.
+                </p>
+              </div>
+            </div>
+
+            {/* DevOps Automation */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group">
+              <div className="p-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <line x1="6" x2="6" y1="3" y2="15"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <path d="M18 9a9 9 0 0 1-9 9"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">DevOps Automation</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  CI/CD pipelines, GitOps workflows, and infrastructure as code implementation.
+                </p>
+              </div>
+            </div>
+
+            {/* Security & Compliance */}
+            <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group">
+              <div className="p-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Security & Compliance</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Kubernetes security hardening, policy enforcement, and compliance audits.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
