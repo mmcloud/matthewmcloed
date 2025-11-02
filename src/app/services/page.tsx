@@ -5,7 +5,7 @@ import {
   GlassPanelTitle,
 } from '@/components/glass-panel';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Cloud, Cpu, GitMerge, ShieldCheck, Workflow } from 'lucide-react';
+import { Cloud, Cpu, GitMerge, ShieldCheck, Workflow } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -60,10 +60,13 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+            {services.map((service, index) => {
+              // The GitMerge icon is the 3rd item (index 2)
+              const iconColor = index === 2 ? "w-10 h-10 text-white flex-shrink-0" : "w-10 h-10 text-primary flex-shrink-0";
+              return (
                 <GlassPanel key={service.title} className="flex flex-col">
                     <GlassPanelHeader className="flex-row items-center gap-4">
-                        <service.icon className="w-10 h-10 text-primary flex-shrink-0" />
+                        <service.icon className={iconColor} />
                         <GlassPanelTitle className="text-xl text-white">{service.title}</GlassPanelTitle>
                     </GlassPanelHeader>
                     <GlassPanelContent className="flex-grow">
@@ -77,7 +80,7 @@ export default function ServicesPage() {
                         </div>
                     </GlassPanelContent>
                 </GlassPanel>
-            ))}
+            )})}
         </div>
       </div>
     </section>
