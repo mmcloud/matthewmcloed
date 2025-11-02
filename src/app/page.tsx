@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Why Choose Our Services</h2>
-          <ul className="grid md:grid-cols-2 gap-3 text-sky-100/90 text-left px-4">
+          <ul className="grid md:grid-cols-2 gap-4 text-sky-100/90 text-left px-4">
             {[
               'Production-grade Kubernetes deployments',
               'Cost optimization strategies',
@@ -117,8 +117,9 @@ export default function Home() {
               'Disaster recovery planning',
               'Performance monitoring & optimization',
             ].map((p) => (
-              <li key={p} className="flex items-start gap-2">
-                <span className="text-sky-400 mt-1">•</span> {p}
+              <li key={p} className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-sky-400 mt-0.5 flex-shrink-0" />
+                <span>{p}</span>
               </li>
             ))}
           </ul>
