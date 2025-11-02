@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 216 83% 8%; /* Dark electric blue */
+    --background: 222 84% 4%; /* Dark Navy Blue */
     --foreground: 210 40% 98%; /* Light gray for text */
 
-    --card: 215 39% 17%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 215 39% 17%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
     
-    --primary: 204 94% 55%; /* Vivid sky blue */
-    --primary-foreground: 210 40% 98%;
+    --primary: 198 93% 60%; /* Bright Cyan/Sky Blue */
+    --primary-foreground: 222 84% 4%;
 
-    --secondary: 215 39% 17%;
+    --secondary: 222 47% 11%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 28% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 210 40% 80%;
 
-    --accent: 215 39% 22%; /* Lighter shade for hover */
+    --accent: 222 47% 15%; /* Lighter shade for hover */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
     
-    --border: 215 39% 25%;
-    --input: 215 39% 25%;
-    --ring: 204 94% 55%;
+    --border: 222 47% 15%;
+    --input: 222 47% 15%;
+    --ring: 198 93% 60%;
     
     --radius: 0.5rem;
   }
@@ -41,7 +41,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-gradient-to-br from-sky-700 via-sky-800 to-gray-900 text-foreground;
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
     background-attachment: fixed;
     background-size: cover;
   }
@@ -49,7 +50,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-kube-glass backdrop-blur-glass border border-white/20 shadow-lg;
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-xl;
   }
 
   .glass-hover {
@@ -61,7 +62,7 @@
   }
 
   .glass-nav {
-    @apply bg-kube-glass backdrop-blur-glass border-b border-white/10 shadow-lg;
+    @apply bg-black/30 backdrop-blur-lg border-b border-white/10;
   }
   
   .glass-button {

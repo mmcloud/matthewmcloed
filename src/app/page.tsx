@@ -1,77 +1,101 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="flex flex-col text-white">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center">
-        <div className="max-w-2xl mx-auto glass p-10 rounded-2xl">
-          <p className="uppercase tracking-widest text-sky-200">
-            Kubernetes Certified Expert
-          </p>
-          <h1 className="text-5xl font-bold mt-4 mb-4">
-            Transform Your Infrastructure
-          </h1>
-          <p className="text-sky-100/80">
-            Enterprise-grade cloud solutions and Kubernetes expertise to scale
-            your business with confidence.
-          </p>
-          <div className="mt-8 flex gap-4 justify-center">
-            <Link href="/contact" passHref>
-              <Button className="glass-button rounded-lg">
-                Schedule Consultation
-              </Button>
-            </Link>
-            <Link href="/services" passHref>
-              <Button className="glass-button rounded-lg">View Services</Button>
-            </Link>
+      <section className="relative min-h-[95vh] flex flex-col justify-center items-center text-left pt-20">
+        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 bg-card/50 border border-border px-3 py-1 rounded-full text-sm font-medium">
+              <Briefcase className="w-4 h-4 text-primary" />
+              Kubernetes Certified Expert
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold tracking-tighter">
+              Transform Your Infrastructure with <span className="text-primary">Kubernetes Excellence</span>
+            </h1>
+            <p className="max-w-xl text-lg text-muted-foreground">
+              Enterprise-grade cloud solutions, DevOps automation, and Kubernetes expertise to scale your business with confidence.
+            </p>
+            <div className="flex gap-4">
+              <Link href="/contact" passHref>
+                <Button size="lg">
+                  Schedule Consultation <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link href="/services" passHref>
+                <Button size="lg" variant="secondary">
+                  View Services
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="glass p-8 rounded-2xl space-y-4">
+              {[
+                "Production-grade Kubernetes deployments",
+                "High availability architecture",
+                "Automated scaling solutions",
+                "Cost optimization strategies",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-4">
+                  <div className="bg-primary/10 border border-primary/20 p-2 rounded-full">
+                    <CheckCircle className="w-5 h-5 text-primary"/>
+                  </div>
+                  <span className="flex-1 text-foreground/80">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
+      
       {/* Certifications */}
       <section className="py-16 text-center">
-        <h2 className="text-2xl font-bold text-white mb-6">
-          Certified Kubernetes Expert
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6 text-sky-200 font-medium">
-          <span className="bg-sky-900/50 px-5 py-2 rounded-full shadow-sm">
-            CKA — Admin
-          </span>
-          <span className="bg-sky-900/50 px-5 py-2 rounded-full shadow-sm">
-            CKAD — Developer
-          </span>
-          <span className="bg-sky-900/50 px-5 py-2 rounded-full shadow-sm">
-            CKS — Security
-          </span>
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Certified Kubernetes Expert
+          </h2>
+          <p className="text-muted-foreground mb-8">Holding all three official CNCF Kubernetes certifications</p>
+          <div className="flex flex-wrap justify-center gap-6 text-sky-200 font-medium">
+            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
+              CKA — Admin
+            </span>
+            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
+              CKAD — Developer
+            </span>
+            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
+              CKS — Security
+            </span>
+          </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-sky-900/40">
+      <section className="py-12 bg-card/40 border-y border-border">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center gap-8">
           <div>
             <p className="text-4xl font-bold">99.9%</p>
-            <p className="mt-2 text-sm text-sky-200">Uptime SLA</p>
+            <p className="mt-2 text-sm text-muted-foreground">Uptime SLA</p>
           </div>
           <div>
             <p className="text-4xl font-bold">10+</p>
-            <p className="mt-2 text-sm text-sky-200">Years Experience</p>
+            <p className="mt-2 text-sm text-muted-foreground">Years Experience</p>
           </div>
           <div>
             <p className="text-4xl font-bold">24/7</p>
-            <p className="mt-2 text-sm text-sky-200">Support Available</p>
+            <p className="mt-2 text-sm text-muted-foreground">Support Available</p>
           </div>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-20">
-        <div className="max-w-6xl mx-auto text-center mb-12">
+        <div className="max-w-6xl mx-auto text-center mb-12 px-4">
           <h2 className="text-3xl font-bold">Comprehensive Cloud Services</h2>
-          <p className="mt-3 text-sky-200">
+          <p className="mt-3 text-muted-foreground">
             End-to-end solutions for modern cloud infrastructure
           </p>
         </div>
@@ -94,50 +118,30 @@ export default function Home() {
               desc: 'Hardening, policy enforcement, and compliance audits.',
             },
           ].map((s) => (
-            <div key={s.title} className="glass-card">
-              <h3 className="text-lg font-semibold text-sky-300 mb-2">
+            <div key={s.title} className="glass-card rounded-xl">
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {s.title}
               </h3>
-              <p className="text-sky-100/80 text-sm">{s.desc}</p>
+              <p className="text-muted-foreground text-sm">{s.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Why Choose Our Services</h2>
-          <ul className="grid md:grid-cols-2 gap-4 text-sky-100/90 text-left px-4">
-            {[
-              'Production-grade Kubernetes deployments',
-              'Cost optimization strategies',
-              'High availability architecture',
-              'Automated scaling solutions',
-              'Disaster recovery planning',
-              'Performance monitoring & optimization',
-            ].map((p) => (
-              <li key={p} className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-sky-400 mt-0.5 flex-shrink-0" />
-                <span>{p}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-24 bg-sky-900/40 text-white text-center">
-        <h2 className="text-4xl font-bold mb-4">Ready to Scale?</h2>
-        <p className="max-w-2xl mx-auto text-lg mb-8 text-sky-100/80">
-          Let's discuss how we can transform your infrastructure and accelerate
-          your growth.
-        </p>
-        <Link href="/contact" passHref>
-          <Button className="bg-sky-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-600">
-            Get Started Today
-          </Button>
-        </Link>
+      <section className="py-24 bg-card/40 text-white text-center">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold mb-4">Ready to Scale?</h2>
+          <p className="max-w-2xl mx-auto text-lg mb-8 text-muted-foreground">
+            Let's discuss how we can transform your infrastructure and accelerate
+            your growth.
+          </p>
+          <Link href="/contact" passHref>
+            <Button size="lg">
+              Get Started Today
+            </Button>
+          </Link>
+        </div>
       </section>
     </div>
   );
