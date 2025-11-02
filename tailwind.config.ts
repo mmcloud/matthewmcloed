@@ -18,6 +18,8 @@ export default {
 
       /* -------------------- COLORS -------------------- */
       colors: {
+        slate900: '#0F172A',
+        blue900: '#1E3A8A',
         // Base brand palette from current website
         azure: '#38BDF8', // Bright sky blue
         kubeblue: '#0284C7', // Mid blue (buttons / accents)
@@ -58,6 +60,7 @@ export default {
 
       /* -------------------- BACKGROUNDS -------------------- */
       backgroundImage: {
+        'hero-gradient': 'linear-gradient(to right, #0F172A, #1E3A8A, #0F172A)',
         // Primary hero gradient — matches current page header
         'kube-gradient': 'linear-gradient(135deg, #38BDF8 0%, #0284C7 40%, #0C4A6E 100%)',
         // Lighter overlay for frosted-glass cards

@@ -1,54 +1,40 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Briefcase } from 'lucide-react';
+import { ArrowRight, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="flex flex-col text-white">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex flex-col justify-center items-center text-left pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10"></div>
-        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-card/50 border border-border px-3 py-1 rounded-full text-sm font-medium">
+      <section className="bg-hero-gradient text-white py-32 text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+             <div className="inline-flex items-center gap-2 bg-card/50 border border-border px-3 py-1 rounded-full text-sm font-medium">
               <Briefcase className="w-4 h-4 text-primary" />
               Kubernetes Certified Expert
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold tracking-tighter">
-              Transform Your Infrastructure with <span className="text-primary">Kubernetes Excellence</span>
-            </h1>
-            <p className="max-w-xl text-lg text-muted-foreground">
-              Enterprise-grade cloud solutions, DevOps automation, and Kubernetes expertise to scale your business with confidence.
-            </p>
-            <div className="flex gap-4">
-              <Link href="/contact" passHref>
-                <Button size="lg">
-                  Schedule Consultation <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-              <Link href="/services" passHref>
-                <Button size="lg" variant="secondary">
-                  View Services
-                </Button>
-              </Link>
-            </div>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
           </div>
-          <div className="hidden md:block">
-            <div className="glass p-8 rounded-2xl space-y-4">
-              {[
-                "Production-grade Kubernetes deployments",
-                "High availability architecture",
-                "Automated scaling solutions",
-                "Cost optimization strategies",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-4">
-                  <div className="bg-primary/10 border border-primary/20 p-2 rounded-full">
-                    <CheckCircle className="w-5 h-5 text-primary"/>
-                  </div>
-                  <span className="flex-1 text-foreground/80">{item}</span>
-                </div>
-              ))}
-            </div>
+
+          <h1 className="text-5xl font-bold mb-4">
+            Transform Your Infrastructure with <span className="text-sky-300">Kubernetes Excellence</span>
+          </h1>
+
+          <p className="text-sky-100/90 mb-8 max-w-xl mx-auto">
+            Enterprise-grade cloud solutions, DevOps automation, and Kubernetes expertise to scale your business with confidence.
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <Link href="/contact" className="bg-white/10 px-8 py-3 rounded-lg border border-white/20 backdrop-blur-md hover:bg-white/20 transition">
+              Schedule Consultation
+            </Link>
+            <Link href="/services" className="border border-white/30 bg-transparent px-8 py-3 rounded-lg hover:bg-white/10 transition">
+              View Services
+            </Link>
           </div>
         </div>
       </section>
