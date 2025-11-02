@@ -7,6 +7,7 @@ export default function Home() {
     <div className="flex flex-col text-white">
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex flex-col justify-center items-center text-left pt-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10"></div>
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 bg-card/50 border border-border px-3 py-1 rounded-full text-sm font-medium">
