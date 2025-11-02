@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "background",
+      "description": "Abstract network background for glassmorphism effect",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=1920&auto=format&fit=crop",
+      "imageHint": "abstract network"
+    },
+    {
+      "id": "matthew-mcleod",
+      "description": "Profile picture of Matthew McLeod",
+      "imageUrl": "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzYyMDI3MzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "blog-1",
+      "description": "Blog post image about Kubernetes",
+      "imageUrl": "https://images.unsplash.com/photo-1667984550707-bf0beecaa082?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzZXJ2ZXIlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2MjA3MDI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "server technology"
+    },
+    {
+      "id": "blog-2",
+      "description": "Blog post image about cloud architecture",
+      "imageUrl": "https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbG91ZCUyMGRhdGF8ZW58MHx8fHwxNzYyMDU4NTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud data"
+    },
+    {
+      "id": "blog-3",
+      "description": "Blog post image about DevOps",
+      "imageUrl": "https://images.unsplash.com/photo-1653387319597-84bde7e5368e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwcHJvZ3JhbW1pbmd8ZW58MHx8fHwxNzYxOTc3MDkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code programming"
+    }
+  ]
 }
