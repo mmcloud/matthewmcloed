@@ -90,6 +90,63 @@ export default function Home() {
                   <div className="h-2 glass rounded w-1/2"></div>
                 </div>
               </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg glass-strong border border-cyan-500/30 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="h-3 glass-strong rounded w-3/4 mb-2"></div>
+                  <div className="h-2 glass rounded w-1/2"></div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg glass-strong border border-cyan-500/30 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="h-3 glass-strong rounded w-3/4 mb-2"></div>
+                  <div className="h-2 glass rounded w-1/2"></div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg glass-strong border border-cyan-500/30 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="h-3 glass-strong rounded w-3/4 mb-2"></div>
+                  <div className="h-2 glass rounded w-1/2"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
