@@ -8,6 +8,8 @@ import {
   CollectionReference,
   DocumentReference,
   SetOptions,
+  WithFieldValue,
+  Firestore,
 } from 'firebase/firestore';
 import { errorEmitter } from '@/firebase/error-emitter';
 import {FirestorePermissionError} from '@/firebase/errors';
@@ -36,13 +38,16 @@ export function setDocumentNonBlocking(docRef: DocumentReference, data: any, opt
  * Does NOT await the write operation internally.
  * Returns the Promise for the new doc ref, but typically not awaited by caller.
  */
-export function addDocumentNonBlocking(colRef: CollectionReference, data: any) {
-  const promise = addDoc(colRef, data)
+export function addDocumentNonBlocking<T>(
+  collectionRef: CollectionReference,
+  data: WithFieldValue<T>
+) {
+  const promise = addDoc(collectionRef, data)
     .catch(error => {
       errorEmitter.emit(
         'permission-error',
         new FirestorePermissionError({
-          path: colRef.path,
+          path: collectionRef.path,
           operation: 'create',
           requestResourceData: data,
         })
