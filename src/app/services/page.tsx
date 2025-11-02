@@ -61,8 +61,7 @@ export default function ServicesPage() {
 
         <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => {
-              // The GitMerge icon is the 3rd item (index 2)
-              const iconColor = index === 2 ? "w-10 h-10 text-white flex-shrink-0" : "w-10 h-10 text-primary flex-shrink-0";
+              const iconColor = "w-10 h-10 text-white flex-shrink-0";
               return (
                 <GlassPanel key={service.title} className="flex flex-col">
                     <GlassPanelHeader className="flex-row items-center gap-4">
