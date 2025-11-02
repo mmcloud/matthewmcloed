@@ -4,31 +4,26 @@
 
 @layer base {
   :root {
-    --background: 211 62% 10%;
-    --foreground: 210 40% 98%;
-    --card: 212 59% 30%;
-    --card-foreground: 210 40% 98%;
-    --popover: 211 62% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 205 83% 56%;
-    --primary-foreground: 211 62% 18%;
-    --secondary: 212 59% 30%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 212 59% 25%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 212 59% 30%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 63% 31%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 204 94% 40%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 212 59% 40%;
-    --input: 212 59% 40%;
-    --ring: 205 83% 56%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 47.4% 11.2%;
     --radius: 0.5rem;
-    --chart-1: 205 83% 56%;
-    --chart-2: 212 59% 40%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
   }
 }
 
@@ -38,9 +33,5 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
 }

@@ -1,243 +1,149 @@
-import {
-  GlassPanel,
-  GlassPanelContent,
-  GlassPanelHeader,
-  GlassPanelTitle,
-} from '@/components/glass-panel';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, Cloud, Cpu, GitMerge } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
-  const profileImage = PlaceHolderImages.find(
-    (img) => img.id === 'matthew-mcleod'
-  );
-  const blogImage1 = PlaceHolderImages.find((img) => img.id === 'blog-1');
-  const blogImage2 = PlaceHolderImages.find((img) => img.id === 'blog-2');
-
   return (
-    <div className="flex flex-col items-center">
-      <section className="w-full py-20 md:py-32 lg:py-40">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none font-headline">
-                  Matthew McLeod
-                </h1>
-                <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl">
-                  Cloud Native & Kubernetes Expert
-                </h2>
-                <p className="max-w-[600px] text-gray-300 md:text-xl">
-                  Transforming businesses with scalable, resilient, and
-                  cost-effective cloud solutions. Let's build the future of
-                  your infrastructure, together.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/services">
-                  <Button size="lg">
-                    Explore Services <ArrowRight className="ml-2" />
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button size="lg" variant="secondary">
-                    Get in Touch
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <GlassPanel className="p-4">
-                {profileImage && (
-                  <Image
-                    src={profileImage.imageUrl}
-                    alt={profileImage.description}
-                    data-ai-hint={profileImage.imageHint}
-                    width={400}
-                    height={400}
-                    className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-                  />
-                )}
-              </GlassPanel>
-            </div>
+    <div className="min-h-screen flex flex-col bg-white text-gray-800">
+      {/* Hero */}
+      <section className="flex flex-col items-center justify-center text-center py-28 bg-gradient-to-b from-sky-50 to-white">
+        <p className="uppercase text-sm tracking-widest text-sky-600 font-semibold">
+          Kubernetes Certified Expert
+        </p>
+        <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight">
+          Transform Your Infrastructure with{' '}
+          <span className="text-sky-600">Kubernetes Excellence</span>
+        </h1>
+        <p className="mt-6 max-w-2xl text-gray-600">
+          Enterprise-grade cloud solutions, DevOps automation, and Kubernetes
+          expertise to scale your business with confidence.
+        </p>
+        <div className="mt-8 flex gap-4">
+          <Link href="/contact" passHref>
+            <Button className="bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700">
+              Schedule Consultation
+            </Button>
+          </Link>
+          <Link href="/services" passHref>
+            <Button
+              variant="outline"
+              className="border-sky-600 text-sky-700 px-6 py-3 rounded-lg hover:bg-sky-50"
+            >
+              View Services
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-16 bg-white text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Certified Kubernetes Expert
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6 text-sky-700 font-medium">
+          <span className="bg-sky-50 px-5 py-2 rounded-full shadow-sm">
+            CKA — Admin
+          </span>
+          <span className="bg-sky-50 px-5 py-2 rounded-full shadow-sm">
+            CKAD — Developer
+          </span>
+          <span className="bg-sky-50 px-5 py-2 rounded-full shadow-sm">
+            CKS — Security
+          </span>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-sky-600 text-white">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center gap-8">
+          <div>
+            <p className="text-4xl font-bold">99.9%</p>
+            <p className="mt-2 text-sm">Uptime SLA</p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold">10+</p>
+            <p className="mt-2 text-sm">Years Experience</p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold">24/7</p>
+            <p className="mt-2 text-sm">Support Available</p>
           </div>
         </div>
       </section>
 
-      <section id="about" className="w-full py-12 md:py-24 bg-black/10">
-        <div className="container mx-auto px-4 md:px-6">
-          <GlassPanel>
-            <GlassPanelHeader>
-              <GlassPanelTitle className="text-3xl font-bold tracking-tighter sm:text-4xl text-white font-headline">
-                About Me
-              </GlassPanelTitle>
-            </GlassPanelHeader>
-            <GlassPanelContent>
-              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-                <div className="space-y-4 text-gray-300">
-                  <p>
-                    With over a decade of experience in software engineering and
-                    cloud architecture, I specialize in helping organizations
-                    leverage the full potential of cloud-native technologies. My
-                    expertise lies in designing and implementing robust
-                    Kubernetes platforms, streamlining DevOps pipelines, and
-                    building secure, high-performance systems on major cloud
-                    providers like AWS, GCP, and Azure.
-                  </p>
-                  <p>
-                    I'm passionate about open-source and contributing to the
-                    community. I believe in a collaborative approach, working
-                    closely with teams to foster a culture of innovation and
-                    continuous improvement.
-                  </p>
-                </div>
-                <div className="flex flex-wrap items-start gap-4">
-                  <Badge variant="secondary" className="text-lg py-1 px-4">Kubernetes</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">AWS</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">GCP</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">Azure</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">DevOps</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">CI/CD</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">Terraform</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">Go</Badge>
-                  <Badge variant="secondary" className="text-lg py-1 px-4">Python</Badge>
-                </div>
-              </div>
-            </GlassPanelContent>
-          </GlassPanel>
-        </div>
-      </section>
-
-      <section id="services" className="w-full py-12 md:py-24">
-        <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl font-headline">
-              My Services
-            </h2>
-            <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Providing a range of services to elevate your cloud strategy.
-            </p>
-          </div>
-          <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-            <GlassPanel>
-              <GlassPanelHeader>
-                <Cloud className="w-12 h-12 text-primary" />
-                <GlassPanelTitle className="text-white mt-4">Cloud Solutions</GlassPanelTitle>
-              </GlassPanelHeader>
-              <GlassPanelContent>
-                <p className="text-gray-300">
-                  Architecting and implementing scalable and resilient cloud
-                  infrastructures on AWS, GCP, and Azure.
-                </p>
-              </GlassPanelContent>
-            </GlassPanel>
-            <GlassPanel>
-              <GlassPanelHeader>
-                <Cpu className="w-12 h-12 text-primary" />
-                <GlassPanelTitle className="text-white mt-4">Kubernetes Expertise</GlassPanelTitle>
-              </GlassPanelHeader>
-              <GlassPanelContent>
-                <p className="text-gray-300">
-                  Container orchestration, cluster management, and optimization
-                  for high-performance, cost-effective workloads.
-                </p>
-              </GlassPanelContent>
-            </GlassPanel>
-            <GlassPanel>
-              <GlassPanelHeader>
-                <GitMerge className="w-12 h-12 text-primary" />
-                <GlassPanelTitle className="text-white mt-4">DevOps Automation</GlassPanelTitle>
-              </GlassPanelHeader>
-              <GlassPanelContent>
-                <p className="text-gray-300">
-                  Building robust CI/CD pipelines, automating infrastructure with
-                  IaC, and fostering a culture of continuous delivery.
-                </p>
-              </GlassPanelContent>
-            </GlassPanel>
-          </div>
-          <div className="mt-8">
-            <Link href="/services">
-              <Button>
-                Learn More About Services <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="blog" className="w-full py-12 md:py-24 bg-black/10">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter text-center text-white sm:text-4xl md:text-5xl font-headline">
-            From the Blog
-          </h2>
-          <p className="mx-auto max-w-[700px] text-center text-gray-300 md:text-xl/relaxed mt-4">
-            Insights on cloud-native, Kubernetes, and modern software
-            development.
+      {/* Services */}
+      <section className="py-20 bg-sky-50">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold">Comprehensive Cloud Services</h2>
+          <p className="mt-3 text-gray-600">
+            End-to-end solutions for modern cloud infrastructure
           </p>
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 mt-8">
-            <Link href="/blog">
-              <GlassPanel className="flex flex-col md:flex-row items-center gap-6 p-4 h-full">
-                {blogImage1 && (
-                  <Image
-                    src={blogImage1.imageUrl}
-                    alt={blogImage1.description}
-                    data-ai-hint={blogImage1.imageHint}
-                    width={200}
-                    height={150}
-                    className="rounded-lg object-cover w-full md:w-1/3"
-                  />
-                )}
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-white">
-                    Demystifying Kubernetes Networking
-                  </h3>
-                  <p className="text-gray-300">
-                    A deep dive into Services, Ingress, and CNIs. Understand how
-                    pods communicate with each other and the outside world.
-                  </p>
-                  <p className="text-sm text-primary">Read More</p>
-                </div>
-              </GlassPanel>
-            </Link>
-            <Link href="/blog">
-              <GlassPanel className="flex flex-col md:flex-row items-center gap-6 p-4 h-full">
-                {blogImage2 && (
-                  <Image
-                    src={blogImage2.imageUrl}
-                    alt={blogImage2.description}
-                    data-ai-hint={blogImage2.imageHint}
-                    width={200}
-                    height={150}
-                    className="rounded-lg object-cover w-full md:w-1/3"
-                  />
-                )}
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-white">
-                    The Power of Infrastructure as Code
-                  </h3>
-                  <p className="text-gray-300">
-                    How Terraform can help you manage your cloud resources with
-                    confidence and predictability.
-                  </p>
-                  <p className="text-sm text-primary">Read More</p>
-                </div>
-              </GlassPanel>
-            </Link>
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/blog">
-              <Button size="lg">
-                Visit Blog <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
-          </div>
         </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: 'Kubernetes Consulting',
+              desc: 'Expert guidance on orchestration, design, and best practices.',
+            },
+            {
+              title: 'Cloud Migration',
+              desc: 'Seamless transition to cloud-native infrastructure with zero downtime.',
+            },
+            {
+              title: 'DevOps Automation',
+              desc: 'CI/CD pipelines, GitOps workflows, and infrastructure as code.',
+            },
+            {
+              title: 'Security & Compliance',
+              desc: 'Hardening, policy enforcement, and compliance audits.',
+            },
+          ].map((s) => (
+            <div
+              key={s.title}
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+            >
+              <h3 className="text-lg font-semibold text-sky-700 mb-2">
+                {s.title}
+              </h3>
+              <p className="text-gray-600 text-sm">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Services</h2>
+          <ul className="grid md:grid-cols-2 gap-3 text-gray-700 text-left px-4">
+            {[
+              'Production-grade Kubernetes deployments',
+              'Cost optimization strategies',
+              'High availability architecture',
+              'Automated scaling solutions',
+              'Disaster recovery planning',
+              'Performance monitoring & optimization',
+            ].map((p) => (
+              <li key={p} className="flex items-start gap-2">
+                <span className="text-sky-600 mt-1">•</span> {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-sky-600 text-white text-center">
+        <h2 className="text-4xl font-bold mb-4">Ready to Scale?</h2>
+        <p className="max-w-2xl mx-auto text-lg mb-8">
+          Let's discuss how we can transform your infrastructure and accelerate
+          your growth.
+        </p>
+        <Link href="/contact" passHref>
+          <Button className="bg-white text-sky-700 px-8 py-3 rounded-lg font-semibold hover:bg-sky-50">
+            Get Started Today
+          </Button>
+        </Link>
       </section>
     </div>
   );
