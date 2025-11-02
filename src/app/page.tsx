@@ -313,8 +313,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <section className="relative bg-slate-900 py-20 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+          
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why Choose Our Services</h2>
+            <p className="text-xl text-white/70 mb-8">
+              Battle-tested expertise delivering enterprise-grade solutions that scale.
+            </p>
+            <ul className="space-y-4">
+              {[
+                'Production-grade Kubernetes deployments',
+                'Cost optimization strategies',
+                'High availability architecture',
+                'Automated scaling solutions',
+                'Disaster recovery planning',
+                'Performance monitoring & optimization'
+              ].map(item => (
+                <li key={item} className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white/80">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-600 blur-3xl opacity-30"></div>
+            <div className="relative glass-strong rounded-2xl p-8 text-center border border-cyan-500/30">
+              <h3 className="text-2xl font-bold mb-3 text-gradient">Ready to Scale?</h3>
+              <p className="text-white/70 mb-6">
+                Let's discuss how we can transform your infrastructure and accelerate your growth.
+              </p>
+              <a href="/contact">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-10 rounded-md px-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-xl shadow-cyan-500/30">
+                  Get Started Today
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
-
-    
