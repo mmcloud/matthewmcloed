@@ -119,7 +119,7 @@ export default function Home() {
                     stroke="currentColor"
                     strokeWidth="2"
                   >
-                    <path d="M21.8 10A10 10- 0 1 1 17 3.3"></path>
+                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
                     <path d="m9 11 3 3L22 4"></path>
                   </svg>
                 </div>
@@ -264,10 +264,7 @@ export default function Home() {
               <div className="p-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
-                    <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
-                    <line x1="6" x2="6.01" y1="6" y2="6"/>
-                    <line x1="6" x2="6.01" y1="18" y2="18"/>
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Migration</h3>
