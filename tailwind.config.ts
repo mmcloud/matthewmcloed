@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -18,32 +18,26 @@ export default {
 
       /* -------------------- COLORS -------------------- */
       colors: {
+        primary: '#0F172A',
+        accent: '#06B6D4',
+        'accent-light': '#22D3EE',
         slate900: '#0F172A',
         blue900: '#1E3A8A',
-        // Base brand palette from current website
-        azure: '#38BDF8', // Bright sky blue
-        kubeblue: '#0284C7', // Mid blue (buttons / accents)
-        deepblue: '#0C4A6E', // Deep navy background
-
-        // Transparent layers for subtle glass effects
+        azure: '#38BDF8',
+        kubeblue: '#0284C7',
+        deepblue: '#0C4A6E',
         skyglass: 'rgba(255, 255, 255, 0.12)',
         navyglass: 'rgba(12, 74, 110, 0.25)',
-
-        // Semantic color tokens for consistency
         text: '#1E293B',
         heading: '#0F172A',
         muted: '#64748B',
         background: '#FFFFFF',
         surface: '#F8FAFC',
-
-        // Gradients and brand-specific tones
         gradient: {
           light: '#38BDF8',
           mid: '#0284C7',
           dark: '#0C4A6E',
         },
-
-        // Tailwind default blue scale (retained for utility use)
         blue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -60,10 +54,9 @@ export default {
 
       /* -------------------- BACKGROUNDS -------------------- */
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(to right, #0F172A, #1E3A8A, #0F172A)',
-        // Primary hero gradient — matches current page header
+        'hero-gradient': 'linear-gradient(to bottom right, #0F172A, #1E3A8A, #0F172A)',
+        'accent-gradient': 'linear-gradient(to right, #06B6D4, #22D3EE)',
         'kube-gradient': 'linear-gradient(135deg, #38BDF8 0%, #0284C7 40%, #0C4A6E 100%)',
-        // Lighter overlay for frosted-glass cards
         'kube-glass': 'linear-gradient(135deg, rgba(56,189,248,0.25) 0%, rgba(2,132,199,0.25) 40%, rgba(12,74,110,0.35) 100%)',
       },
 
@@ -77,9 +70,10 @@ export default {
         glass: '12px',
       },
       boxShadow: {
+        cyan: '0 0 25px rgba(6,182,212,0.3)',
         glass: '0 4px 30px rgba(0, 0, 0, 0.08)',
         glow: '0 0 25px rgba(56, 189, 248, 0.25)',
-        subtle: '0 2px 12px rgba(0, 0, 0, 0.05)',
+        'shadow-subtle': '0 2px 12px rgba(0, 0, 0, 0.05)',
       },
 
       /* -------------------- RADIUS -------------------- */

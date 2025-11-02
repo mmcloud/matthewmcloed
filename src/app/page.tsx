@@ -1,133 +1,97 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Briefcase } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="flex flex-col text-white">
       {/* Hero Section */}
-      <section className="bg-hero-gradient text-white py-32 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 mb-4">
-             <div className="inline-flex items-center gap-2 bg-card/50 border border-border px-3 py-1 rounded-full text-sm font-medium">
-              <Briefcase className="w-4 h-4 text-primary" />
-              Kubernetes Certified Expert
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 lg:py-32 text-white">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side text */}
+          <div>
+            <div className="inline-block mb-6">
+              <div className="inline-flex items-center rounded-md border text-xs font-semibold glass-strong text-cyan-400 border-cyan-400/30 px-4 py-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="m15.5 13 1.5 8.5a.5.5 0 0 1-.8.5l-3.6-2.7a1 1 0 0 0-1.2 0l-3.6 2.7a.5.5 0 0 1-.8-.5l1.5-8.5" />
+                </svg>
+                Kubernetes Certified Expert
+              </div>
             </div>
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-          </div>
 
-          <h1 className="text-5xl font-bold mb-4">
-            Transform Your Infrastructure with <span className="text-sky-300">Kubernetes Excellence</span>
-          </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Transform Your Infrastructure with
+              <span className="block text-gradient">
+                Kubernetes Excellence
+              </span>
+            </h1>
 
-          <p className="text-sky-100/90 mb-8 max-w-xl mx-auto">
-            Enterprise-grade cloud solutions, DevOps automation, and Kubernetes expertise to scale your business with confidence.
-          </p>
+            <p className="text-xl text-white/70 mb-8 leading-relaxed">
+              Enterprise-grade cloud solutions, DevOps automation, and
+              Kubernetes expertise to scale your business with confidence.
+            </p>
 
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white/10 px-8 py-3 rounded-lg border border-white/20 backdrop-blur-md hover:bg-white/20 transition">
-              Schedule Consultation
-            </Link>
-            <Link href="/services" className="border border-white/30 bg-transparent px-8 py-3 rounded-lg hover:bg-white/10 transition">
-              View Services
-            </Link>
-          </div>
-        </div>
-      </section>
-      
-      {/* Certifications */}
-      <section className="py-16 text-center">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Certified Kubernetes Expert
-          </h2>
-          <p className="text-muted-foreground mb-8">Holding all three official CNCF Kubernetes certifications</p>
-          <div className="flex flex-wrap justify-center gap-6 text-sky-200 font-medium">
-            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
-              CKA — Admin
-            </span>
-            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
-              CKAD — Developer
-            </span>
-            <span className="bg-card/70 border border-border px-5 py-2 rounded-full shadow-sm">
-              CKS — Security
-            </span>
-          </div>
-        </div>
-      </section>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="/contact">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-10 rounded-md px-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-xl shadow-cyan-500/30">
+                  Schedule Consultation
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </a>
 
-      {/* Stats */}
-      <section className="py-12 bg-card/40 border-y border-border">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center gap-8">
-          <div>
-            <p className="text-4xl font-bold">99.9%</p>
-            <p className="mt-2 text-sm text-muted-foreground">Uptime SLA</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold">10+</p>
-            <p className="mt-2 text-sm text-muted-foreground">Years Experience</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold">24/7</p>
-            <p className="mt-2 text-sm text-muted-foreground">Support Available</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto text-center mb-12 px-4">
-          <h2 className="text-3xl font-bold">Comprehensive Cloud Services</h2>
-          <p className="mt-3 text-muted-foreground">
-            End-to-end solutions for modern cloud infrastructure
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
-          {[
-            {
-              title: 'Kubernetes Consulting',
-              desc: 'Expert guidance on orchestration, design, and best practices.',
-            },
-            {
-              title: 'Cloud Migration',
-              desc: 'Seamless transition to cloud-native infrastructure with zero downtime.',
-            },
-            {
-              title: 'DevOps Automation',
-              desc: 'CI/CD pipelines, GitOps workflows, and infrastructure as code.',
-            },
-            {
-              title: 'Security & Compliance',
-              desc: 'Hardening, policy enforcement, and compliance audits.',
-            },
-          ].map((s) => (
-            <div key={s.title} className="glass-card rounded-xl">
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {s.title}
-              </h3>
-              <p className="text-muted-foreground text-sm">{s.desc}</p>
+              <a href="/services">
+                <button className="inline-flex items-center justify-center gap-2 text-sm font-medium h-10 rounded-md px-8 glass-strong text-white hover:bg-white/20 border-white/20">
+                  View Services
+                </button>
+              </a>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      {/* CTA */}
-      <section className="py-24 bg-card/40 text-white text-center">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Ready to Scale?</h2>
-          <p className="max-w-2xl mx-auto text-lg mb-8 text-muted-foreground">
-            Let's discuss how we can transform your infrastructure and accelerate
-            your growth.
-          </p>
-          <Link href="/contact" passHref>
-            <Button size="lg">
-              Get Started Today
-            </Button>
-          </Link>
+          {/* Right side visual cards */}
+          <div className="hidden lg:block relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 blur-3xl opacity-20"></div>
+            <div className="relative glass-strong rounded-2xl p-8 space-y-4 border border-cyan-500/30">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-lg glass-strong border border-cyan-500/30 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21.8 10A10 10 0 1 1 17 3.3"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="h-3 glass-strong rounded w-3/4 mb-2"></div>
+                  <div className="h-2 glass rounded w-1/2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
