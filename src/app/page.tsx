@@ -152,15 +152,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* 🌐 CERTIFIED KUBERNETES EXPERT + STATS SECTION */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Certified Kubernetes Expert</h2>
             <p className="text-white/70">Holding all three official CNCF Kubernetes certifications</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1 */}
+          {/* Certification Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {/* CKA */}
             <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
               <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
@@ -174,7 +178,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* CKAD */}
             <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
               <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
@@ -188,7 +192,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* CKS */}
             <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
               <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
@@ -202,6 +206,31 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Metrics Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="text-center glass-strong rounded-2xl p-8 transition-all duration-300 hover:border-cyan-400/40 border border-white/10">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                99.9%
+              </div>
+              <div className="text-white/70 font-medium">Uptime SLA</div>
+            </div>
+
+            <div className="text-center glass-strong rounded-2xl p-8 transition-all duration-300 hover:border-cyan-400/40 border border-white/10">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                10+
+              </div>
+              <div className="text-white/70 font-medium">Years Experience</div>
+            </div>
+
+            <div className="text-center glass-strong rounded-2xl p-8 transition-all duration-300 hover:border-cyan-400/40 border border-white/10">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                24/7
+              </div>
+              <div className="text-white/70 font-medium">Support Available</div>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>
