@@ -61,7 +61,7 @@ export default function Home() {
 
               <a href="/services">
                 <button className="inline-flex items-center justify-center gap-2 text-sm font-medium h-10 rounded-md px-8 glass-strong text-white hover:bg-white/20 border-white/20">
-                  View Services
+                  Services
                 </button>
               </a>
               <a href="/blog">
@@ -301,7 +301,7 @@ export default function Home() {
             <div className="rounded-xl border glass-strong border-white/10 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 group">
               <div className="p-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-cyan-500/30">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                   </svg>
                 </div>
@@ -364,5 +364,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
