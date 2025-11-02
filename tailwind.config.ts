@@ -16,6 +16,8 @@ export default {
         code: ['monospace'],
       },
       colors: {
+        skyglass: 'rgba(255, 255, 255, 0.15)', // frosted white tint
+        navyglass: 'rgba(3, 105, 161, 0.2)',  // subtle blue overlay
         sky: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -79,7 +81,19 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
       },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '20px',
+      },
+      boxShadow: {
+        glass: '0 4px 30px rgba(0, 0, 0, 0.1)',
+        glow: '0 0 30px rgba(14, 165, 233, 0.35)',
+      },
       borderRadius: {
+        glass: '1rem',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',

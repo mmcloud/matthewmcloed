@@ -4,25 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 204 94% 40%;
+    --background: 216 83% 8%; /* Dark electric blue */
+    --foreground: 210 40% 98%; /* Light gray for text */
+
+    --card: 215 39% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 39% 17%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 204 94% 55%; /* Vivid sky blue */
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
+
+    --secondary: 215 39% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 39% 22%; /* Lighter shade for hover */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 47.4% 11.2%;
+    
+    --border: 215 39% 25%;
+    --input: 215 39% 25%;
+    --ring: 204 94% 55%;
+    
     --radius: 0.5rem;
   }
 }
@@ -32,6 +41,30 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-sky-700 via-sky-800 to-gray-900 text-foreground;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-skyglass backdrop-blur-lg border border-white/20 shadow-glass rounded-glass;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/25 hover:shadow-glow;
+  }
+
+  .glass-card {
+    @apply glass glass-hover p-6;
+  }
+
+  .glass-nav {
+    @apply bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm;
+  }
+
+  .glass-button {
+    @apply glass px-4 py-2 text-white font-semibold hover:bg-white/20;
   }
 }
