@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col text-white">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center">
-        <div className="max-w-2xl mx-auto glass p-10">
+        <div className="max-w-2xl mx-auto glass p-10 rounded-2xl">
           <p className="uppercase tracking-widest text-sky-200">
             Kubernetes Certified Expert
           </p>

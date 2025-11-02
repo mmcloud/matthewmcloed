@@ -18,6 +18,9 @@ export default {
       colors: {
         skyglass: 'rgba(255, 255, 255, 0.15)', // frosted white tint
         navyglass: 'rgba(3, 105, 161, 0.2)',  // subtle blue overlay
+        azure: "#38BDF8",   // light blue
+        kubeblue: "#0284C7", // mid blue
+        deepblue: "#0C4A6E", // dark base
         sky: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -81,12 +84,17 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
       },
+      backgroundImage: {
+        'kube-gradient': "linear-gradient(135deg, #38BDF8 0%, #0284C7 40%, #0C4A6E 100%)",
+        'kube-glass': "linear-gradient(135deg, rgba(56,189,248,0.25) 0%, rgba(2,132,199,0.25) 40%, rgba(12,74,110,0.35) 100%)",
+      },
       backdropBlur: {
         xs: '2px',
         sm: '4px',
         md: '8px',
         lg: '12px',
         xl: '20px',
+        glass: '12px',
       },
       boxShadow: {
         glass: '0 4px 30px rgba(0, 0, 0, 0.1)',

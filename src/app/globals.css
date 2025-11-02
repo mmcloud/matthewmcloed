@@ -49,7 +49,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-skyglass backdrop-blur-lg border border-white/20 shadow-glass rounded-glass;
+    @apply bg-kube-glass backdrop-blur-glass border border-white/20 shadow-lg;
   }
 
   .glass-hover {
@@ -57,14 +57,14 @@
   }
 
   .glass-card {
-    @apply glass glass-hover p-6;
+    @apply glass glass-hover p-6 rounded-glass;
   }
 
   .glass-nav {
-    @apply bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm;
+    @apply bg-kube-glass backdrop-blur-glass border-b border-white/10 shadow-lg;
   }
-
+  
   .glass-button {
-    @apply glass px-4 py-2 text-white font-semibold hover:bg-white/20;
+    @apply bg-white/10 text-white font-medium px-4 py-2 rounded-lg hover:bg-white/20 hover:shadow-md transition;
   }
 }
