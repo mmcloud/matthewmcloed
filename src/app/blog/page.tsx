@@ -49,7 +49,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="py-12 md:py-24">
+    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-32 pb-20 lg:pt-48 lg:pb-32 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl font-headline">
@@ -100,6 +100,6 @@ export default function BlogPage() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
