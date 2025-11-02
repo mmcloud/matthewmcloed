@@ -230,12 +230,8 @@ export default function Home() {
               <div className="text-white/70 font-medium">Support Available</div>
             </div>
           </div>
-
         </div>
-      </section>
-      
-      <section className="py-20 relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
 
           {/* Header */}
           <div className="text-center mb-16">
@@ -320,3 +316,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
